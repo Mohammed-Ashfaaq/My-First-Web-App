@@ -2,28 +2,27 @@
 <html>
     <head>
         <title>Information About Me</title>
-        <style>
-            .career-table {
-                border-collapse: collapse;
-                width: 100%;
-            }
-            .career-table th, .career-table td {
-                border: 1px solid black;
-                padding: 5px;
-                text-align: left;
-            }
-            .career-table th {
-                background-color: #f2f2f2;
-            }
-        </style>
+        <!-- Viewport meta tag for responsive design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link to external CSS stylesheet -->
+        <link rel="stylesheet" href="style.css">
     </head>
+    
     <body>
-        <h1>All About Me</h1>
-        <p>I am a 27 year old, with a BSc in Biochemistry, obtained from <a href="https://www.shu.ac.uk/" target="_blank">Sheffield Hallam University</a>. Currently I am pursuing an MSc course in <a href="https://online.shu.ac.uk/study-online/msc-computer-science-with-artificial-intelligence/" target="_blank">Computer Science with Artificial Intelligence</a> with an aim to develop the skills and knowledge required to build a career in predictive modelling and data science.</p>
+        <!-- Header section -->
+        <header>
+            <h1 id="header-title">Welcome to My Personal Webpage</h1>
+        </header>
 
-        <h2>My Career</h2>
+        <!-- About Me section -->
+        <h2>About Me</h2>
+        <p>I am a 28 year old, with a BSc in Biochemistry, obtained from <a href="https://www.shu.ac.uk/" target="_blank">Sheffield Hallam University</a>. Currently I am pursuing an MSc course in <a href="https://online.shu.ac.uk/study-online/msc-computer-science-with-artificial-intelligence/" target="_blank">Computer Science with Artificial Intelligence</a> with an aim to develop the skills and knowledge required to build a career in predictive modelling and data science.</p>
+
+        <!-- Career section -->
+        <h3>My Career</h3>
         <p>Since graduating, my working career has consisted of employment in different cities, as a microbiologist, a research analyst in drug development and currently as an analytical scientist within the nicotine and cannabinoid chemistry. Working within the industry has taught me vital soft skills such as <strong>communication</strong>, <strong>teamwork</strong>, <strong>leadership</strong> and <strong>problem solving</strong>. Challenging myself doing a masters, with a PhD as my next goal would allow me to work towards pursuing a career in research, making novel contributions and continue to grow as a professional.</p>
 
+        <!-- Career history table -->
         <table class="career-table">
             <tr>
                 <th>Job Title</th>
@@ -47,9 +46,9 @@
             </tr>
         </table>
 
-        <h3>My Hobbies</h3>
-        <p>Some of my hobbies include:</p>
-        <ul>
+        <!-- Hobbies section -->
+        <h4>My Hobbies</h4>
+        <ul>    
             <li>Playing sports</li>
             <li>Reading books</li>
             <li>Watching movies/tv shows</li>
@@ -58,11 +57,59 @@
             <li>Self care</li>
         </ul>
 
-        <h4>Current Status</h4>
+        <!-- Current status section -->
+        <h5>Current Status</h5>
         <p>I am currently reading <em>The Color Purple</em> by <em>Alice Walker</em>, a classic novel that explores themes of resilience and identity, through the story of a young African American woman in the American South, in the early 20th century.</p>
         <p>Some of my time is spent watching <em>House Of The Dragon</em>, with the rest spent on improving in badminton and aiming to win my 5 A Side Powerleague.</p>
-        <img src="Colour-Purple.jpg" 
-            alt="The Color Purple book cover" 
-            width="150">
+
+        <!-- Book cover image -->
+        <img src="Colour-Purple.jpg" alt="The Color Purple book cover" width="150">
+        <br>
+
+        <!-- Book recommendation API section -->
+        <p id="book-message">As an avid bookworm, I believe books contain lots of hidden, motivational messages, in addition to providing entertainment, knowledge and enforcing soft skills such as reading and creativity.</p>
+        <button id="bookButton">Generate Book Recommendation</button>
+        <p><strong>Click again for another random book!</strong></p>
+
+        <!-- Container for API generated book data -->
+        <div id="book-container"></div>
+        <br>
+
+        <!-- Contact form section -->
+        <h5>Contact Me</h5>
+        <p><em>If you would like to get in touch regarding research opportunities, collaborations or general inquiries, please fill out the form below:</em></p>
+        <div id="form-container">
+            <form name="contactForm" action="#" method="post" onsubmit="return validateForm()">
+                <!-- Enquiry type dropdown -->
+                <label for="Enquiry"><strong>Enquiry Type:</strong></label>
+                <select id="Enquiry" name="Enquiry">
+                    <option value="Research">Research Opportunities</option>
+                    <option value="Collaboration">Collaborations</option>
+                    <option value="General">General Inquiries</option>
+                </select><br><br>
+
+                <!-- First name field -->
+                <label for="fname"><strong>First Name:</strong></label>
+                <input type="text" id="fname" name="fname"><br><br>
+
+                <!-- Last name field -->
+                <label for="lname"><strong>Last Name:</strong></label>
+                <input type="text" id="lname" name="lname"><br><br>
+
+                <!-- Email field -->
+                <label for="email"><strong>Email:</strong></label>
+                <input type="email" id="email" name="email"><br><br>
+
+                <!-- Optional message textarea -->
+                <label for="message"><strong>Message (Optional):</strong></label><br><br>
+                <textarea id="message" name="message" maxlength="500" placeholder="Max 500 characters"></textarea><br><br>
+
+                <!-- Submit button -->
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <!-- Link to external JavaScript file -->
+        <script src="index.js"></script>
     </body>
 </html>

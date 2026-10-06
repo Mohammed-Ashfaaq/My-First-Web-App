@@ -1,0 +1,113 @@
+/* General page styles */
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ED8442;
+}
+
+/* Heading styles */
+h2, h3, h4, h5 {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Career table styling */
+.career-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Career table cell styling */
+.career-table th, .career-table td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+
+/* Career table header styling */
+.career-table th {
+    background-color: #27EEF5;
+}
+
+/* Button styling */
+button {
+    background-color: #ED8442;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #c96d2e;
+}
+
+/* Book container heading alignment */
+#book-container h4 {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Contact form container styling */
+#form-container {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 13px;
+}
+
+/* Form input styling */
+input[type="text"], input[type="email"], textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Mobile responsive styles — applies at 600px and below */
+@media (max-width: 600px) {
+    /* Reduce body margin on mobile */
+    body {
+        margin: 10px;
+    }
+    /* Reduce h1 font size on mobile */
+    h1 {
+        font-size: 20px;
+    }
+    /* Reduce heading font sizes on mobile */
+    h2, h3, h4 {
+        font-size: 16px;
+    }
+    /* Reduce paragraph font size on mobile */
+    p {
+        font-size: 14px;
+    }
+    /* Make table scrollable horizontally on mobile */
+    .career-table {
+        font-size: 12px;
+        overflow-x: auto;
+        display: block;
+    }
+    /* Reduce table cell padding on mobile */
+    .career-table th, .career-table td {
+        font-size: 12px;
+        padding: 3px;
+    }
+    /* Make image responsive on mobile */
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

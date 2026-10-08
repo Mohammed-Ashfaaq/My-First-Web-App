@@ -3,7 +3,6 @@ body {
     margin: 20px;
     font-family: Arial, sans-serif;
 }
-
 /* Header styling */
 header {
     text-align: center;
@@ -14,8 +13,14 @@ header {
 }
 
 /* Heading styles */
-h2, h3, h4, h5 {
+h3, h4, h5 {
     font-size: 1.25em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2{
+    margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -36,6 +41,31 @@ h2, h3, h4, h5 {
 /* Career table header styling */
 .career-table th {
     background-color: #27EEF5;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #333;
+}
+
+body.dark-mode .career-table th {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .career-table td {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode form input[type="text"], body.dark-mode form input[type="email"], body.dark-mode form textarea, body.dark-mode form select {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
 }
 
 /* Button styling */

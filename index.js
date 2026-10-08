@@ -1,3 +1,7 @@
+document.getElementById("toggle").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+});
+
 // Form validation — checks required fields before submission
 function validateForm() {
     // Get form field values
